@@ -1,12 +1,13 @@
 package me.nereo.multi_image_selector.utils;
 
-import android.media.ExifInterface;
+import android.content.Context;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import me.nereo.multi_image_selector.R;
 
 /**
  * 时间处理工具
@@ -14,20 +15,20 @@ import java.util.Locale;
  */
 public class TimeUtils {
 
-    public static String timeFormat(long timeMillis, String pattern){
+    public static String timeFormat(long timeMillis, String pattern) {
         SimpleDateFormat format = new SimpleDateFormat(pattern, Locale.CHINA);
         return format.format(new Date(timeMillis));
     }
 
-    public static String formatPhotoDate(long time){
-        return timeFormat(time, "yyyy-MM-dd");
+    public static String formatPhotoDate(Context context, long time) {
+        return timeFormat(time, context.getString(R.string.time_format));
     }
 
-    public static String formatPhotoDate(String path){
+    public static String formatPhotoDate(Context context, String path) {
         File file = new File(path);
-        if(file.exists()){
+        if (file.exists()) {
             long time = file.lastModified();
-            return formatPhotoDate(time);
+            return formatPhotoDate(context, time);
         }
         return "1970-01-01";
     }

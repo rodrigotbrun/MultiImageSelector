@@ -208,7 +208,7 @@ public class MultiImageSelectorFragment extends Fragment {
                     int index = firstVisibleItem + 1 == view.getAdapter().getCount() ? view.getAdapter().getCount() - 1 : firstVisibleItem + 1;
                     Image image = (Image) view.getAdapter().getItem(index);
                     if (image != null) {
-                        mTimeLineText.setText(TimeUtils.formatPhotoDate(image.path));
+                        mTimeLineText.setText(TimeUtils.formatPhotoDate(getActivity(), image.path));
                     }
                 }
             }

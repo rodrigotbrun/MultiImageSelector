@@ -1,0 +1,16 @@
+
+<resources>
+
+    <string name="app_name">Works</string>
+    <string name="folder_all">Todas imagens</string>
+    <string name="preview">Pré-visualização</string>
+    <string name="msg_no_camera">Camera não encontrada</string>
+    <string name="msg_amount_limit">Limite de imagens atingido</string>
+    <string name="take_picture">Tirar foto</string>
+    <string name="execute">Selecionar</string>
+    <string name="time_format">dd/MM/yyyy</string>
+    <string name="s_photo"> Foto</string>
+    <string name="s_photos"> Fotos</string>
+    <string name="btn_back">Voltar</string>
+
+</resources>
